@@ -19,7 +19,9 @@ ENV/
 *.swp
 *.swo
 *~
+
 .files
+.files/*
 # Data directories (raw input)
 data/
 *.pdf
