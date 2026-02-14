@@ -1,0 +1,43 @@
+# Core API & App
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+python-dotenv
+python-multipart
+httpx
+
+# LangChain & AI
+langchain
+langchain-community
+langchain-core
+langchain-ollama
+langchain-neo4j
+langchain-experimental
+langgraph
+openai
+sentence-transformers
+
+# Database & Graph
+neo4j>=5.20.0
+faiss-cpu
+
+# Utilities
+numpy
+tiktoken
+PyPDF2>=3.0.1
+
+# Frontend
+chainlit>=1.3.0
+
+# --- Voice Agent Dependencies ---
+livekit-agents
+livekit-plugins-silero
+aiohttp                 # Required for Voice Agent -> Backend communication
+
+# --- Local AI Models (CRITICAL FOR YOUR PLUGINS) ---
+piper-tts
+faster-whisper
+
+# Choose ONE of these based on your hardware:
+onnxruntime       

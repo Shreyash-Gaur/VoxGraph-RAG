@@ -31,6 +31,9 @@ data/
 
 # Vector stores & indexes
 backend/db/neo4j_data/
+backend/db/cache/
+backend/db/memory/
+backend/db/vector_data/
 backend/db/
 *.index
 *.faiss
@@ -64,8 +67,10 @@ build/
 
 # Chainlit
 .chainlit/
+chainlit.md
 
 # Voice Models
-interfaces/voice_mode/models
+*.onnx
+*.onnx.json
 
 !requirements.txt
