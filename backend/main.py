@@ -68,7 +68,7 @@ def startup_event():
     """
     Initialize services and the Graph Agent.
     """
-    global memory_service, semantic_cache, embed_cache, retrieve_service, ollama_client, graph_service, rag_agent
+    global memory_service, semantic_cache, embed_cache, retrieve_service, graph_service, rag_agent
 
     logger.info("Starting Agentic-RAG service...")
 
@@ -102,8 +102,8 @@ def startup_event():
     reranker_obj = None
     if settings.RERANKER_ENABLED:
         try:
-            from backend.tools.reranker import CrossEncoderReranker
-            reranker_obj = CrossEncoderReranker(model_name=settings.RERANKER_MODEL)
+            from backend.tools.reranker import Reranker
+            reranker_obj = Reranker()
             logger.info(f"Reranker loaded: {settings.RERANKER_MODEL}")
         except Exception as e:
             logger.exception(f"Failed to load reranker: {e}")
